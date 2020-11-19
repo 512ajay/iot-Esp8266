@@ -71,7 +71,7 @@ void callback(const char* topic, byte* payload, unsigned int length){
  for (int i = 0; i < length; i++) {
   messageTemp += (char)payload[i];
  }
- if(strcmp(topic, "lodhiajaykumar4@gmail.com/led") ==0){
+ if(strcmp(topic, "topic/relay1") ==0){
   
    if(messageTemp =="on"){
     setLedState(HIGH);
@@ -87,7 +87,7 @@ void callback(const char* topic, byte* payload, unsigned int length){
  Serial.print(" topic: ");
  Serial.println(topic);
  }
- if(strcmp(topic1, "lodhiajaykumar4@gmail.com/led2") ==0){
+ if(strcmp(topic1, "topic/mess") ==0){
  Serial.println("Publish received.");
  Serial.print(" message: ");
  Serial.println(messageTemp);
